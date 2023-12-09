@@ -19,10 +19,10 @@ export default function TopNav() {
             Home
           </a>
           <a href="#" className="text-dark-gray hover:underline">
-            Designs
+            More apps
           </a>
           <a href="#" className="text-dark-gray hover:underline">
-            Music
+            About me
           </a>
           <a href="#" className="text-dark-gray hover:underline">
             Contact

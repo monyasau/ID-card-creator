@@ -41,7 +41,21 @@ const Canvas = () => {
       context.beginPath();
       context.rect(5, 255, 490, 40);
       context.stroke()
+      //header text
+      context.font = "20px Arial";
+      context.fillStyle = textTheme;
+      context.fillText("kakskskskkdkdkdkdkkdkdkkdkdkdddddddddssc", 40, 40);
+      // footer text
+      context.fillStyle = textTheme;
+      context.fillText("kakskskskkdkdkdkdkkdkdkkdkdkdddddddddssc", 40, 280);
 
+      // info texts
+      context.fillStyle = "black";
+      context.font = "20px Arial";
+      context.fillText("Name: " + FormData.name, 225, 100);
+      context.fillText("Gender: "+FormData.gender, 225, 140);
+      context.fillText("Valid until: " + FormData.validTill, 225, 180);
+      context.fillText("ID No: " + FormData.idNo, 225, 220);
     };
   }, []);
 
