@@ -61,7 +61,7 @@ const Canvas = () => {
 
   return (
     <>
-      <div className="max-w-screen-xl w-full mx-auto my-20">
+      <div className="my-20 w-[50%] mx-auto">
         <canvas
           ref={canvasRef}
           width={500}

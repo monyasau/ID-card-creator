@@ -1,7 +1,7 @@
 export default function Form() {
     return (
         <>
-        <div className="w-[10%]">
+        <div className="w-[50%] flex flex-wrap">
             <input type="text" name="" id="" className="m-10 p-1.5 border" />
             <input type="text" name="" id="" className="m-10 p-1.5 border" />
             <input type="text" name="" id="" className="m-10 p-1.5 border" />
