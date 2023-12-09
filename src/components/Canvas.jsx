@@ -11,7 +11,7 @@ const Canvas = () => {
     let bgTheme = "blue";
     let textTheme = "white";
     let FormData = {
-      name: "Olajide olanrewaju",
+      name: "john doe",
       idNo: Math.floor(Math.random() * 10000),
       validTill: new Date().getFullYear() + Math.floor(Math.random() * 4),
       gender: "......"
