@@ -28,7 +28,7 @@ export default function TopNav() {
             Contact
           </a>
         </div>
-
+ 
         <div
           id="dropdownMenuToggleIcon"
           className="dropdown align-right sm:hidden items-center flex"
