@@ -1,14 +1,16 @@
-import { useState } from 'react'
-import TopNav from './components/TopNav'
+import TopNav from "./components/TopNav";
+import Canvas from "./components/Canvas";
 
 function App() {
-  const [count, setCount] = useState(0)
+  // const [count, setCount] = useState(0);
+
 
   return (
     <>
-    <TopNav/>
+      <TopNav />
+      <Canvas />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
