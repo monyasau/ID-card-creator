@@ -1,11 +1,15 @@
 This project demonstrates a simple React application with a canvas and a form.
 
-#Technologies:
+# Technologies:
 React
 Vite
 Canvas API
 
-#Features:
+# Live link:
+https://id-card-creator.netlify.app
+
+
+# Features:
 
 Generates a personalized id card with:
 Background image
