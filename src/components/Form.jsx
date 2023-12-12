@@ -1,4 +1,8 @@
+import Canvas from "./Canvas";
+
 export default function Form() {
+  const dataToPass = "Hello from Parent";
+
   return (
     <>
       <div className="w-[50%] flex flex-wrap">
@@ -18,7 +22,7 @@ export default function Form() {
           </select>
         </div>
         <div className="w-[50%]">
-          <span>Name:</span>
+          <span>Add image:</span>
           <input type="image" className="m-5 p-1.5 h-12 border" src="" alt="" />
         </div>
       </div>
