@@ -1,5 +1,4 @@
 import testImage from "../assets/image.jpg";
-
 import { useEffect, useRef } from "react";
 
 const Canvas = () => {
@@ -44,10 +43,10 @@ const Canvas = () => {
       //header text
       context.font = "20px Arial";
       context.fillStyle = textTheme;
-      context.fillText("kakskskskkdkdkdkdkkdkdkkdkdkdddddddddssc", 40, 40);
+      context.fillText("Title here", 40, 40);
       // footer text
       context.fillStyle = textTheme;
-      context.fillText("kakskskskkdkdkdkdkkdkdkkdkdkdddddddddssc", 40, 280);
+      context.fillText("Footer here", 40, 280);
 
       // info texts
       context.fillStyle = "black";
