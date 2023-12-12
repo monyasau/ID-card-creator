@@ -1,7 +1,4 @@
-import Canvas from "./Canvas";
-
 export default function Form() {
-  const dataToPass = "Hello from Parent";
 
   return (
     <>
