@@ -3,7 +3,6 @@ import Form  from './components/Form'
 import Canvas from "./components/Canvas";
 
 function App() {
-  // const [count, setCount] = useState(0);
 
 
   return (
