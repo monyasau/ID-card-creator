@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import profileImage from "../assets/blank-profile-picture.png";
 import { useEffect, useRef, useState } from "react";
 
@@ -10,12 +9,6 @@ const [userData, updateUserData]= useState({
   
 
 })
-=======
-import testImage from "../assets/image.jpg";
-import { useEffect, useRef } from "react";
-
-const Canvas = () => {
->>>>>>> dc43030b456067d396f5d6a2ae5ebb5b958615fe
   const canvasRef = useRef(null);
 
   useEffect(() => {
@@ -24,22 +17,14 @@ const Canvas = () => {
     let bgTheme = "blue";
     let textTheme = "white";
     let FormData = {
-<<<<<<< HEAD
       name: userData.name,
-=======
-      name: "john doe",
->>>>>>> dc43030b456067d396f5d6a2ae5ebb5b958615fe
       idNo: Math.floor(Math.random() * 10000),
       validTill: new Date().getFullYear() + Math.floor(Math.random() * 4),
       gender: "......"
     };
 
     const image = new Image();
-<<<<<<< HEAD
     image.src = profileImage;
-=======
-    image.src = testImage;
->>>>>>> dc43030b456067d396f5d6a2ae5ebb5b958615fe
     image.onload = () => {
       //background color
       context.fillStyle = "#eeeeee";
@@ -52,23 +37,19 @@ const Canvas = () => {
       context.stroke();
       //header
       context.fillStyle = bgTheme;
-      context.fillRect(5, 5, 490, 50);
+      context.fillRect(0, 0, 500, 50);
       context.beginPath();
-      context.rect(5, 5, 490, 50);
-      context.stroke()
       //footer
       context.fillStyle = bgTheme;
-      context.fillRect(5, 255, 490, 40);
+      context.fillRect(0, 255, 500, 50);
       context.beginPath();
-      context.rect(5, 255, 490, 40);
-      context.stroke()
       //header text
       context.font = "20px Arial";
       context.fillStyle = textTheme;
-      context.fillText("Title here", 40, 40);
+      context.fillText("Title here", 40, 30);
       // footer text
       context.fillStyle = textTheme;
-      context.fillText("Footer here", 40, 280);
+      context.fillText("Footer here", 40, 285);
 
       // info texts
       context.fillStyle = "black";
@@ -78,7 +59,7 @@ const Canvas = () => {
       context.fillText("Valid until: " + FormData.validTill, 225, 180);
       context.fillText("ID No: " + FormData.idNo, 225, 220);
     };
-  }, []);
+  }, [userData, userData.name]);
 
   return (
     <>
