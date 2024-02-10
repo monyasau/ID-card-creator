@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import profileImage from "../assets/blank-profile-picture.png";
 import { useEffect, useRef, useState } from "react";
 
@@ -9,6 +10,12 @@ const [userData, updateUserData]= useState({
   
 
 })
+=======
+import testImage from "../assets/image.jpg";
+import { useEffect, useRef } from "react";
+
+const Canvas = () => {
+>>>>>>> dc43030b456067d396f5d6a2ae5ebb5b958615fe
   const canvasRef = useRef(null);
 
   useEffect(() => {
@@ -17,14 +24,22 @@ const [userData, updateUserData]= useState({
     let bgTheme = "blue";
     let textTheme = "white";
     let FormData = {
+<<<<<<< HEAD
       name: userData.name,
+=======
+      name: "john doe",
+>>>>>>> dc43030b456067d396f5d6a2ae5ebb5b958615fe
       idNo: Math.floor(Math.random() * 10000),
       validTill: new Date().getFullYear() + Math.floor(Math.random() * 4),
       gender: "......"
     };
 
     const image = new Image();
+<<<<<<< HEAD
     image.src = profileImage;
+=======
+    image.src = testImage;
+>>>>>>> dc43030b456067d396f5d6a2ae5ebb5b958615fe
     image.onload = () => {
       //background color
       context.fillStyle = "#eeeeee";
