@@ -14,7 +14,7 @@ function App() {
   return (
     <>
       <TopNav />
-      <div className="flex max-w-screen-xl w-full items-center mx-auto mt-[10%]">
+      <div className="md:grid grid-cols-2 max-w-screen-xl w-full items-center mx-auto mt-[10%]">
       <Form userInput={userData} setUserInput={setUserData}/>
         <Canvas userInput={userData}/>
       </div>
