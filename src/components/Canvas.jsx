@@ -1,26 +1,28 @@
 import profileImage from "../assets/blank-profile-picture.png";
 import { useEffect, useRef, useState } from "react";
 
-const Canvas = ({ userInput }) => {
-  
+const Canvas = ({ userInput,count }) => {
+
   const canvasRef = useRef(null);
-
+  
   useEffect(() => {
-    const canvas = canvasRef.current;
-    const context = canvas.getContext("2d");
-    let bgTheme = "blue";
-    let textTheme = "white";
-    let FormData = {
-      name: userInput.name,
-      idNo: Math.floor(Math.random() * 10000),
-      validTill: new Date().getFullYear() + Math.floor(Math.random() * 4+1),
-      gender: userInput.gender,
-    };
-
+    
+        const canvas = canvasRef.current;
+        const context = canvas.getContext("2d");
+        let bgTheme = "blue";
+        let textTheme = "white";
+        let FormData = {
+          name: userInput.name,
+          idNo: "00"+Math.floor(Math.random() * 10000),
+          validTill: new Date().getFullYear() + Math.floor(Math.random() * 4+1),
+          gender: userInput.gender,
+        };
+    console.log('useEffect logic ran');
+    
     const image = new Image();
     image.src = profileImage;
+    
     // useEffect(
-    image.onload = () => {
       //background color
       context.fillStyle = "#fff";
       context.fillRect(0, 0, 500, 300);
@@ -49,8 +51,8 @@ const Canvas = ({ userInput }) => {
       // info texts
       context.fillStyle = "black";
       context.font = "20px Arial";
-      context.fillText("Name: " + FormData.name, 225, 100);
-      context.fillText("Gender: " + FormData.gender, 225, 140);
+      context.fillText("Name: " + userInput.name, 225, 100);
+      context.fillText("Gender: " + userInput.gender, 225, 140);
       context.fillText("Valid until: " + FormData.validTill, 225, 180);
       context.fillText("ID No: " + FormData.idNo, 225, 220);
       context.closePath();
@@ -63,8 +65,8 @@ const Canvas = ({ userInput }) => {
       context.clip();
       //image
       context.drawImage(image, 5, 65, 200, 180);
-    };
-  });
+  }, [userInput]); // 👈️ add props as dependencies
+
   // [userData, userData.name])
 
   // useEffect(() => {
@@ -79,6 +81,7 @@ const Canvas = ({ userInput }) => {
       <div className="my-20 w-[50%] mx-auto flex md:flex-col items-center">
         <canvas ref={canvasRef} width={500} height={300} className="" />
       <button className=" m-4 p-4 bg-slate-300 text-xl rounded" onClick={handleDownload}>Download ID Card</button>
+    {count}
       </div>
     </>
   );
