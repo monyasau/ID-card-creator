@@ -1,3 +1,4 @@
+
 import profileImage from "../assets/blank-profile-picture.png";
 import { useEffect, useRef, useState } from "react";
 
@@ -82,6 +83,7 @@ const Canvas = ({ userInput,count }) => {
         <canvas ref={canvasRef} width={500} height={300} className="" />
       <button className=" m-4 p-4 bg-slate-300 text-xl rounded" onClick={handleDownload}>Download ID Card</button>
     {count}
+    {userInput.name}
       </div>
     </>
   );

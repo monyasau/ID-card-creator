@@ -25,7 +25,7 @@ let Form = ({count, userInput, userData, setUserInput, setCountProp }) => {
               setUserInput(
                 {
                   name: event.target.value,
-                  gender: userData.gender,
+                  gender: "userData.gender",
                 }
               );
             }}
